@@ -5,43 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neo</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
-
-    <style>
-        @tailwind base;
-        @tailwind components;
-        @tailwind utilities;
-        
-        @layer utilities {
-          @keyframes swipe {
-            0% { transform: translateX(0%); }
-            /* 33% { transform: translateX(-100%); }
-            66% { transform: translateX(-200%); } */
-            100% { transform: translateX(-300%); }
-          }
-        
-          .animate-swipe {
-            animation: swipe 15s linear infinite;
-          }
-        }
-        </style>
-        
 </head>
 <body>
-    <div id="offer-container" class="relative overflow-hidden w-full h-8 bg-blue-500 text-white">
-        <div id="offer-slider" class="absolute left-0 w-full flex animate-swipe">
+    <div id="offer-container" class="relative overflow-hidden w-full h-8 text-white" style="background-color: #3E3232;">
+        <div id="offer-slider" class="absolute left-0 w-full flex">
             <div class="offer flex-shrink-0 w-full h-full flex items-center justify-center">🎉 Flat 50% off on all winter wear!</div>
-            <div class="offer flex-shrink-0 w-full h-full flex items-center justify-center">🔥 Buy 1 Get 1 Free on casual shirts!</div>
-            <div class="offer flex-shrink-0 w-full h-full flex items-center justify-center">✨ Free shipping on orders above $50!</div>
         </div>
     </div>
     
 
-    <nav id="navigation-bar" class="flex items-center justify-between bg-gray-800 text-white p-4 shadow-lg">
-        <!-- Brand Name -->
+    <nav id="navigation-bar" class="flex items-center justify-between text-white p-4 shadow-lg" style="background-color: #7E6363;">
+        
         <h2 class="text-2xl font-bold tracking-wide text-yellow-400">NEO MEN FASHION</h2>
     
-        <!-- Navigation Links -->
+        
         <ul class="flex gap-8 text-base uppercase font-medium">
             <a href="#" class="hover:text-yellow-400"><li>NEW</li></a>
             <a href="#" class="hover:text-yellow-400"><li>SPECIALS</li></a>
@@ -50,7 +29,7 @@
             <a href="#" class="hover:text-yellow-400"><li>SHOP</li></a>
         </ul>
     
-        <!-- Icon Section -->
+        
         <ul class="flex gap-6 text-lg">
             <i class="fas fa-search hover:text-yellow-400 cursor-pointer"></i>
             <i class="fas fa-user hover:text-yellow-400 cursor-pointer"></i>
@@ -58,172 +37,138 @@
             <i class="fas fa-shopping-cart hover:text-yellow-400 cursor-pointer"></i>
         </ul>
     </nav>
-    
 
-    <div class="relative w-full h-[465px] bg-beige overflow-hidden mx-auto">
-        <img src="../assets/img1.png" class="image absolute w-full h-auto opacity-100 transition-transform duration-500 ease-in-out">
-        <img src="../assets/img2.png" class="image absolute w-full h-auto opacity-0 transition-transform duration-500 ease-in-out">
-        <img src="../assets/img3.png" class="image absolute w-full h-auto opacity-0 transition-transform duration-500 ease-in-out">
-        <img src="../assets/img4.png" class="image absolute w-full h-auto opacity-0 transition-transform duration-500 ease-in-out">
-    
-        <!-- Previous Arrow -->
-        <button class="prev absolute top-1/2 left-4 transform -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75" onclick="moveSlide(-1)">
-            &#10094;
-        </button>
-    
-        <!-- Next Arrow -->
-        <button class="next absolute top-1/2 right-4 transform -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75" onclick="moveSlide(1)">
-            &#10095;
-        </button>
-    </div>
-    
+    <div class="relative w-full">
+        <img src="../assets/img1.png" class="w-full h-full object-cover">
+    </div>  
 
-    <div style="display: flex; flex-direction: column; padding:5px 20px 20px 0px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); max-width: 400px; margin: 10px auto; justify-content: center; align-items: center;">
-        <h2>Search Your Nearest Location</h2>
+    <div style="display: flex; flex-direction: column; padding:15px 20px 20px 0px; max-width: 500px; margin: 10px auto; justify-content: center; align-items: center; gap: 10px;">
+        <h1 class="text-3xl font-bold">Search Your Nearest Location</h1>
         <div style="display: flex; gap: 10px;">
             <input type="text" placeholder="Enter Your Location" style="padding: 10px; border-radius: 5px; border-width: 1px; width: 100%; max-width: 300px;">
-            <button type="submit" style="padding: 10px; background-color: white; color: black; border-radius: 5px;">
+            <button type="submit" style="padding: 20px; background-color: #A87C7C; color: black; border-radius: 5px;">
                 <i class="fas fa-search"></i>
             </button>
         </div>
     </div>
 
-    <div style="background-color: beige; width: 100%; height: 465px; object-fit: cover; margin: 20px auto;">
-        <img src="../assets/bestsellers/pant1.jpg">
-        <img src="../assets/bestsellers/pant2.png">
-        <img src="../assets/bestsellers/t-shirt1.png">
-        <img src="../assets/bestsellers/t-shirt2.png">
+    <div class="relative w-full flex justify-center items-center mb-8">
+        <img src="../assets/img2.png" class="max-width:500px; object-cover">
+    </div>  
+
+    <h1 class="text-4xl font-bold mb-8 px-4">Best Sellers</h1>
+
+    <div class="flex flex-row gap-6 mb-9 px-4 py-4">
+        <div class="w-1/4 text-center">
+            <img src="../assets/bestsellers/pant1.jpg" class="w-full">
+            <a href="#" class="font-medium">Black Pant</a>
+        </div>
+        <div class="w-1/4 text-center">
+            <img src="../assets/bestsellers/pant1.jpg" class="w-full">
+            <a href="#" class="font-medium">Black Pant 2</a>
+        </div>
+        <div class="w-1/4 text-center">
+            <img src="../assets/bestsellers/t-shirt1.png" class="w-full">
+            <a href="#" class="font-medium">Multi Color T-Shirt</a>
+        </div>
+        <div class="w-1/4 text-center">
+            <img src="../assets/bestsellers/t-shirt2.png" class="w-full">
+            <a href="#" class="font-medium">Black T-Shirt</a>
+        </div>
     </div>
 
-    <div style="display: flex; flex-direction: row; background-color: aquamarine; margin: 10px auto; width: 80%; padding: 10px; justify-content: center;">
-        <div style="background-color: black; height: 100px; width: 33%; display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0px 5px;">
-            <h4 style="color: white; margin: 0;">Instagram</h4>
-            <a href="https://www.instagram.com/" style="color: white; text-decoration: none;">Checkout</a>
+    
+
+    <div class="flex flex-row justify-center mx-auto my-4 w-4/5 p-4">
+        <div class="h-40 w-60 flex flex-col justify-center items-center mx-1 rounded-lg  gap-2" style="background-color: #FFB52B;">
+            <i class="fa-brands fa-instagram text-3xl"></i>
+            <h4 class="text-black m-0">Instagram</h4>
+            <a href="https://www.instagram.com/" class="text-black no-underline">@neo-men</a>
         </div>
-        <div style="background-color: black; height: 100px; width: 33%; display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0px 5px;">
-            <h4 style="color: white; margin: 0;">Instagram</h4>
-            <a href="https://www.instagram.com/" style="color: white; text-decoration: none;">Checkout</a>
+        <div class="h-40 w-60 flex flex-col justify-center items-center mx-1 rounded-lg gap-2"  style="background-color: #FFB52B;">
+            <i class="fa-brands fa-twitter text-3xl"></i>
+            <h4 class="text-black m-0">Twitter</h4>
+            <a href="https://www.twitter.com/" class="text-black no-underline">@neo-men_x</a>
         </div>
-        <div style="background-color: black; height: 100px; width: 33%; display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0px 5px;">
-            <h4 style="color: white; margin: 0;">Instagram</h4>
-            <a href="https://www.instagram.com/" style="color: white; text-decoration: none;">Checkout</a>
+        <div class="h-40 w-60 flex flex-col justify-center items-center mx-1 rounded-lg gap-2"  style="background-color: #FFB52B;">
+            <i class="fa-brands fa-youtube text-3xl"></i>
+            <h4 class="text-black m-0">YouTube</h4>
+            <a href="https://www.youtube.com/" class="text-black no-underline">@neo-men_fashion</a>
         </div>
     </div>
 
-
-    <footer style="height: 256px; width: 100%; background-color: aqua; display: flex; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box;">
-        <div id="parent" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1200px; box-sizing: border-box; padding: 10px;">
-            <!-- Popular Searches Section -->
-            <p style="margin: 0; flex-grow: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 16px; line-height: 1.5; color: #000;">
+    <footer class="h-full w-full bg-aqua flex flex-col justify-center items-center p-5 box-border" style="background-color: #A87C7C;">
+        <div id="parent" class="flex justify-between items-center w-full max-w-5xl box-border p-2">
+            
+            <p class="m-0 flex-grow whitespace-nowrap overflow-hidden text-ellipsis text-base leading-6 text-black">
                 Popular Searches: 
-                <a href="#" style="text-decoration: none; color: #000;">Jeans</a> | 
-                <a href="#" style="text-decoration: none; color: #000;">Jackets</a> |
-                <a href="#" style="text-decoration: none; color: #000;">T-Shirts</a> |
-                <a href="#" style="text-decoration: none; color: #000;">Shirts</a>
+                <a href="#" class="no-underline text-black">Jeans</a> | 
+                <a href="#" class="no-underline text-black">Jackets</a> |
+                <a href="#" class="no-underline text-black">T-Shirts</a> |
+                <a href="#" class="no-underline text-black">Shirts</a>
             </p>
     
-            <!-- Newsletter Section -->
-            <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 300px; padding: 10px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                <h4 style="color: #000; font-size: 18px; margin-bottom: 10px;">Let's Stay Connected</h4>
-                <input type="email" placeholder="Enter Your Email Id" style="padding: 10px; border-radius: 5px; border-width: 1px; width: 100%; max-width: 300px; margin-bottom: 10px;">
-                <button type="submit" style="padding: 10px; background-color: black; color: white; border-radius: 5px; width: 100%; max-width: 300px; border: none; cursor: pointer;">
-                    Subscribe
-                </button>
+            
+            <div class="whitespace-nowrap overflow-hidden text-ellipsis max-w-xs p-2 flex flex-col justify-center">
+                <h4 class="text-black text-lg mb-2 font-medium">Let's Stay Connected!</h4>
+                <div class="flex flex-row">
+                    <input type="email" placeholder="Enter Your Email Id" class="p-2 rounded border w-2/3 h-12 mb-2">
+                    <button type="submit" class="p-2 bg-black text-white rounded w-1/3 h-12 border-none cursor-pointer">
+                        Subscribe
+                    </button>
+                </div>
             </div>
         </div>
-        <div>
-            <div id="contact">
-                <h4>Contact Us</h4>
-                <ul>
-                    <li>
-                        <i class="fas fa-phone"></i>
-                        <h5>+91 9876543216</h5>
+        <div class="flex justify-between w-full max-w-5xl mt-4">
+            <div id="contact" class="flex flex-col">
+                <h4 class="text-white text-2xl font-bold">CONTACT US</h4>
+                <ul class="list-none p-0">
+                    <li class="flex items-center">
+                        <i class="fas fa-phone mr-2 text-white"></i>
+                        <h5 class="m-0 text-white">+91 9876543216</h5>
                     </li>
-                    <li>
-                        <i class="fas fa-envelope"></i>
-                        <h5>neomenoffl@gmail.com</h5>
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope mr-2 text-white"></i>
+                        <h5 class="m-0 text-white">neomenoffl@gmail.com</h5>
                     </li>
                 </ul>
             </div>
-
-            <div id="about-us">
-                <h4>About Neo Men Fashion</h4>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Investor Information</a></li>
-                    <li><a href="#">Stores</a></li>
-                    <li><a href="#">Blog</a></li> 
+    
+            <div id="about-us" class="flex flex-col">
+                <h4 class="text-white text-2xl font-bold">About Neo Men Fashion</h4>
+                <ul class="list-none p-0">
+                    <li><a href="#" class="no-underline text-white">About Us</a></li>
+                    <li><a href="#" class="no-underline text-white">Investor Information</a></li>
+                    <li><a href="#" class="no-underline text-white">Stores</a></li>
+                    <li><a href="#" class="no-underline text-white">Blog</a></li> 
                 </ul> 
             </div>
-
-            <div id="my-account">
-                <h4>My Account</h4>
-                <ul>
-                    <li><a href="#">My Profile</a></li>
-                    <li><a href="#">Order</a></li>
-                    <li><a href="#">Wishlist</a></li>
-                    <li><a href="#">Track Your Order</a></li>
+    
+            <div id="my-account" class="flex flex-col">
+                <h4 class="text-white text-2xl font-bold">My Account</h4>
+                <ul class="list-none p-0">
+                    <li><a href="#" class="no-underline text-white">My Profile</a></li>
+                    <li><a href="#" class="no-underline text-white">Order</a></li>
+                    <li><a href="#" class="no-underline text-white">Wishlist</a></li>
+                    <li><a href="#" class="no-underline text-white">Track Your Order</a></li>
                 </ul>
             </div>
-
-            <div id="customer-support">
-                <h4>Customer Support</h4>
-                <ul>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Cancellation, Return and Refunds</a></li>
-                    <li><a href="#">Terms and Conditions</a></li>
+    
+            <div id="customer-support" class="flex flex-col">
+                <h4 class="text-white text-2xl font-bold">Customer Support</h4>
+                <ul class="list-none p-0">
+                    <li><a href="#" class="no-underline text-white">FAQs</a></li>
+                    <li><a href="#" class="no-underline text-white">Contact</a></li>
+                    <li><a href="#" class="no-underline text-white">Cancellation, Return and Refunds</a></li>
+                    <li><a href="#" class="no-underline text-white">Terms and Conditions</a></li>
                 </ul>
             </div>
         </div>
-
-        <div>
-            <div>
-                <i class="fas fa-truck"></i>
-                <h5>Free Delivery and Returns</h5>
-            </div>
-            <div>
-                <i class="fas fa-arrow-left"></i>
-                <h5>Full Refunds</h5>
-            </div>
-            <div>
-                <i class="fas fa-shield-alt"></i>
-                <h5>Secure Payment</h5>
-            </div>
-        </div>
-
-        <div>
+        <div class="mt-4 text-center text-white">
             © 2025-Neo Men Fashion / All Rights reserved
         </div>
     </footer>
-    
-    <script>
-        let currentIndex = 0;
-        const images = document.querySelectorAll('.image');
-        const totalImages = images.length;
 
-        function moveSlide(direction) {
-            // Remove the active state (opacity) from the current image
-            images[currentIndex].classList.remove('opacity-100');
-            images[currentIndex].classList.add('opacity-0');
-
-            // Update the current index based on the direction
-            currentIndex += direction;
-
-            // Loop the slides (if you reach the end, go back to the start and vice versa)
-            if (currentIndex >= totalImages) {
-                currentIndex = 0;
-            }
-            if (currentIndex < 0) {
-                currentIndex = totalImages - 1;
-            }
-
-            // Add the active state (opacity) to the new current image
-            images[currentIndex].classList.remove('opacity-0');
-            images[currentIndex].classList.add('opacity-100');
-        }
-    </script>
-    
     
 </body>
 </html>
